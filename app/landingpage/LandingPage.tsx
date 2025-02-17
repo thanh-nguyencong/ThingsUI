@@ -1,5 +1,5 @@
 import {Canvas, useLoader} from '@react-three/fiber'
-import {type GLTF, GLTFLoader} from 'three/examples/jsm/loaders/GLTFLoader.js'
+import {GLTFLoader} from 'three/examples/jsm/loaders/GLTFLoader.js'
 import {Button} from "@/components/Button";
 import {SquareArrowOutUpRight} from "lucide-react";
 import {SignInButton} from "@/components/SignInButton";
@@ -8,7 +8,7 @@ import LandingPageNav from "~/landingpage/LandingPageNav";
 import LandingPageDrawer from "~/landingpage/LandingPageDrawer";
 
 export function LandingPage() {
-    const gltf = useLoader<GLTF, string[]>(GLTFLoader, ['/icons/video.glb', '/icons/image.glb'])
+    const gltf = useLoader(GLTFLoader, ['/icons/video.glb', '/icons/image.glb'])
     gltf[0].scene.rotation.set(3.14 / 2, 0, 0)
     gltf[1].scene.rotation.set(3.14 / 2, 0, 0)
     gltf[0].scene.position.set(-3, 0, 0)

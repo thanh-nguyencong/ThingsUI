@@ -3,8 +3,8 @@ import { LandingPage } from "../landingpage/LandingPage";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "New React Router App" },
-    { name: "description", content: "Welcome to React Router!" },
+    { title: "Thing Hives DAM" },
+    { name: "description", content: "Blazingly fast Digital Asset Management" },
   ];
 }
 
