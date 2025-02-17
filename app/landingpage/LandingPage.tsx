@@ -1,5 +1,5 @@
 import {Canvas, useLoader} from '@react-three/fiber'
-import {type GLTF, GLTFLoader} from 'three/examples/jsm/loaders/GLTFLoader'
+import {type GLTF, GLTFLoader} from 'three/examples/jsm/loaders/GLTFLoader.js'
 import {Button} from "@/components/Button";
 import {SquareArrowOutUpRight} from "lucide-react";
 import {SignInButton} from "@/components/SignInButton";
