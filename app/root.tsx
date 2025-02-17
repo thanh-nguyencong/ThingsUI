@@ -9,6 +9,7 @@ import {
 
 import type { Route } from "./+types/root";
 import "./app.css";
+import {ThemeProvider} from "@/components/theme-provider";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -24,6 +25,7 @@ export const links: Route.LinksFunction = () => [
 ];
 
 export function Layout({ children }: { children: React.ReactNode }) {
+  const isBrowser = typeof window !== "undefined";
   return (
     <html lang="en">
       <head>
@@ -33,7 +35,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
-        {children}
+      {isBrowser && <ThemeProvider>
+          {children}
+        </ThemeProvider> || children}
         <ScrollRestoration />
         <Scripts />
       </body>
