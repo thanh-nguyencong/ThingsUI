@@ -43,7 +43,7 @@ export function LandingPage() {
                         </p>
                         <Button className="h-9 w-fit">Instant 5-Minute Demo <SquareArrowOutUpRight/></Button>
                     </div>
-                    <div>
+                    <div className={"hidden lg:flex"}>
                         <Canvas orthographic camera={{zoom: 10, position: [0, 0, 10]}}>
                             <primitive object={gltf[0].scene}/>
                             <primitive object={gltf[1].scene}/>
