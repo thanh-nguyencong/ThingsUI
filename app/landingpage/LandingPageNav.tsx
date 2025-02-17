@@ -12,7 +12,7 @@ export default function LandingPageNav() {
     return <NavigationMenu className={"hidden lg:block"}>
         <NavigationMenuList>
             <NavigationMenuItem>
-                <NavigationMenuTrigger className={"pl-5 pr-5 pt-2.5 pb-2.5 focus:bg-opacity-0 hover:bg-opacity-0"}>Products</NavigationMenuTrigger>
+                <NavigationMenuTrigger className={"pl-5 pr-5 pt-2.5 pb-2.5"}>Products</NavigationMenuTrigger>
             </NavigationMenuItem>
             <NavigationMenuItem>
                 <NavigationMenuTrigger className={"pl-5 pr-5 pt-2.5 pb-2.5"}>Solutions</NavigationMenuTrigger>
@@ -24,11 +24,13 @@ export default function LandingPageNav() {
                 <NavigationMenuTrigger className={"pl-5 pr-5 pt-2.5 pb-2.5"}>Resources</NavigationMenuTrigger>
             </NavigationMenuItem>
             <NavigationMenuItem>
-                <Link to={""}>
-                    <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                        Pricing
-                    </NavigationMenuLink>
-                </Link>
+                <div className={"w-30 flex items-center justify-center"}>
+                    <Link to={""} className={"w-100%"}>
+                        <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                            Pricing
+                        </NavigationMenuLink>
+                    </Link>
+                </div>
             </NavigationMenuItem>
         </NavigationMenuList>
     </NavigationMenu>
