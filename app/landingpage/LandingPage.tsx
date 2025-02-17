@@ -39,7 +39,8 @@ export function LandingPage() {
                         </h1>
                         <p className="leading-7">
                             Seamless collaboration on millions of assets—at lightning speed.
-                            Customize workflows, automate approvals, all optimized.</p>
+                            Customize workflows, automate approvals, all optimized.
+                        </p>
                         <Button className="h-9 w-fit">Instant 5-Minute Demo <SquareArrowOutUpRight/></Button>
                     </div>
                     <div>
