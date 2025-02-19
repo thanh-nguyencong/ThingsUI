@@ -1,18 +1,15 @@
-import {Canvas, useLoader} from '@react-three/fiber'
-import {GLTFLoader} from 'three/examples/jsm/loaders/GLTFLoader.js'
+import {Canvas, extend, useFrame, useLoader} from '@react-three/fiber'
+import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry.js'
 import {Button} from "@/components/Button";
 import {SquareArrowOutUpRight} from "lucide-react";
 import {SignInButton} from "@/components/SignInButton";
 import {ThemeButton} from "@/components/ThemeButton";
 import LandingPageNav from "~/landingpage/LandingPageNav";
 import LandingPageDrawer from "~/landingpage/LandingPageDrawer";
+import LandingPageCanvas from "~/landingpage/canvas/LandingPageCanvas";
 
+extend({ TextGeometry })
 export function LandingPage() {
-    const gltf = useLoader(GLTFLoader, ['/icons/video.glb', '/icons/image.glb'])
-    gltf[0].scene.rotation.set(3.14 / 2, 0, 0)
-    gltf[1].scene.rotation.set(3.14 / 2, 0, 0)
-    gltf[0].scene.position.set(-3, 0, 0)
-    gltf[1].scene.position.set(3, 0, 0)
     return <>
         <header>
             <div className={"max-w-[100vw] flex justify-center align-center"}>
@@ -44,13 +41,7 @@ export function LandingPage() {
                         <Button className="h-9 w-fit">Instant 5-Minute Demo <SquareArrowOutUpRight/></Button>
                     </div>
                     <div className={"hidden lg:flex"}>
-                        <Canvas orthographic camera={{zoom: 10, position: [0, 0, 10]}}>
-                            <primitive object={gltf[0].scene}/>
-                            <primitive object={gltf[1].scene}/>
-                            <boxGeometry/>
-                            <ambientLight intensity={0.5}/>
-                            <pointLight position={[10, 10, 20]} color={"white"} intensity={4000}/>
-                        </Canvas>
+                        <LandingPageCanvas/>
                     </div>
                 </div>
             </div>
