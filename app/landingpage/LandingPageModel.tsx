@@ -23,7 +23,7 @@ export default function LandingPageModel(){
             thanhdeptrai
         </Text>
         <mesh ref={mesh} {...nodes.Video}>
-            <MeshTransmissionMaterial transmission={0.99} ior={1.2} thickness={0.2} roughness={0} chromaticAberration={0.02} backside={true} />
+            <MeshTransmissionMaterial transmission={0.99} ior={1.2} thickness={3} roughness={0} chromaticAberration={0.02} backside={true} />
         </mesh>
     </group>
 }
