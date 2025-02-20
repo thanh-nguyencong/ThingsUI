@@ -28,7 +28,7 @@ export function LandingPage() {
         </header>
         <section>
             <div className={"pt-29 w-full flex justify-center"}>
-                <div className="grid grid-cols-2 w-[90vw]">
+                <div className="grid grid-cols-2 gap-32 pl-16">
                     <div className={"grid grid-rows-3 gap-8"}>
                         <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl w-[calc(100%+150px)]">
                             Digital Asset Management.<br/>
