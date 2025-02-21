@@ -40,7 +40,7 @@ export function LandingPage() {
                         </p>
                         <Button className="h-9 w-fit">Instant 5-Minute Demo <SquareArrowOutUpRight/></Button>
                     </div>
-                    <div className={"hidden lg:flex"}>
+                    <div className={"hidden lg:flex overflow-visible relative top-[-5rem] left-[-5rem]"}>
                         <LandingPageCanvas/>
                     </div>
                 </div>
